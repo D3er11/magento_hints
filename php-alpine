@@ -1,0 +1,7 @@
+If Magento locale list is too short
+
+From php-alpine-3.16
+apk add icu-libs icu-dev icu-data-full
+this packages are not included, install it and restart php service, if docker w/o init system - restart container
+if check locales in magento: bin/magento info:language:list
+if in ui there is no new locales - bin/magento cache:flush
